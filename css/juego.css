@@ -19,9 +19,9 @@ li::before {
   color: #EC6778;
 }
 
-.col-40 h1 {
-  font-size: 20px;
-  color: #E84A5F;
+.col-40, h1, #footer{
+  font-size: 15px;
+  color: rgb(47, 57, 119);
 }
 
 .col-40, .col-60 {
@@ -37,7 +37,6 @@ li::before {
 
 .col-60 {
   background: #E84A5F;
-
 }
 
 #flecha{
@@ -50,12 +49,13 @@ li::before {
 
 #juego {
   text-align: center;
+  padding: 5px;
   animation: fadein 2s;
   background-color: blue;
   width: 600px;
   height: 600px;
   display: flex;
-  flex-direction: row;
+  align-content: stretch;
   flex-wrap: wrap;
 }
 
@@ -65,9 +65,9 @@ li::before {
 }
 
 .fichas {
-  width: 32.2%;
-  height: 32.2%;
-  padding: 3px;
+  width: 33%;
+  height: 33%;
+  padding: 1px;
 }
 img {
   width: 100%;
