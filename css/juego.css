@@ -41,6 +41,7 @@ li::before {
 
 #flecha{
   font-size: 60px;
+  color: #000;
 }
 
 .texto-centrado {
@@ -49,9 +50,9 @@ li::before {
 
 #juego {
   text-align: center;
-  padding: 5px;
+  padding: 0px;
   animation: fadein 2s;
-  background-color: blue;
+  background-color: #E84A5F;
   width: 600px;
   height: 600px;
   display: flex;
