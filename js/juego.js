@@ -11,7 +11,7 @@ var grilla = [
     [7, 8, 9]
 ];
 
-//guardo la formacion de la grilla ganadora en una variable
+//guardo la formacion de la grilla ganadora en una variable para luego contrastarla en la funcion chequearSiGano()
 var grillaGanadora = [
   [1, 2, 3],
   [4, 5, 6],
@@ -22,11 +22,6 @@ var grillaGanadora = [
 Esta posición comienza siendo la [2, 2]*/
 var filaVacia = 2;
 var columnaVacia = 2;
-
-/*Al iniciar el juego se mezclan las fichas y en ciertas ocaciones durante la mezcla aleatoria pasan por la posicion correcta de la
-grillaGanadora, por lo que se ejecuta la funcion mostrarCartelGanador(), para evitar que se ejecute esta funcion antes de que el
-jugador mueva al menos una ficha cree esta variable booleana o flag*/
-var puedeMostrarCartelGanador=0;
 
 /* Esta función deberá recorrer el arreglo de instrucciones pasado por parámetro. 
 Cada elemento de este arreglo deberá ser mostrado en la lista con id 'lista-instrucciones'. 
@@ -49,17 +44,19 @@ Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
   for (var i=0; i<grilla.length;i++) {
     for (var j=0; j<grilla.length;j++) {
-     if (grilla[i][j]!==grillaGanadora[i][j]){
+      if (grilla[i][j]!==grillaGanadora[i][j]){
         return false;
       } 
-    }
+    }    
   }
-  mostrarCartelGanador();
+  return true;
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
+  if (chequearSiGano()==true){
       swal('Felicitaciones ! Has ganado la partida!');
+  }
 }
 
 /* Función que intercambia dos posiciones en la grilla.
